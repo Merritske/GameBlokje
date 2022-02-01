@@ -2,3 +2,48 @@
     margin:0;
     padding:0;
 }
+.container{
+    margin:50px;
+    position: absolute;
+    border: 3px solid black;
+}
+.poort{
+    display: flex;
+    position: absolute;
+    top: 5px;
+left: 200px;
+}
+.left{
+    width: 100px;
+    height: 200px;
+    transform: skew(0deg, -20deg);
+    position: relative;
+    top: 89px;
+    background-color: grey;
+    border: 5px double rgb(60, 60, 60);
+    z-index: 2;
+}
+.right{
+    width: 100px;
+    height: 200px;
+    transform: skew(0deg, -20deg);
+    position: relative;
+    top: 50px;
+    background-color: grey;
+    border: 5px double rgb(60, 60, 60);
+    z-index: -1;
+}
+.bal{
+    border-radius: 50%;
+    background-color: aqua;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    top: 350px;
+    left: 800px;
+    animation: bal 5s infinite ;
+}
+@keyframes bal{
+    0% {transform: translate(0,0);}
+    100% {transform: translate(-950px, -190px);    }
+}
