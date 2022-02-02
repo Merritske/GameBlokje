@@ -2,7 +2,15 @@
     margin:0;
     padding:0;
 }
+body{
+    width: 1500px;
+    position: absolute;
+}
 .container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    height: 450px;
     margin:50px;
     position: absolute;
     border: 3px solid black;
@@ -34,16 +42,23 @@ left: 200px;
     z-index: -1;
 }
 .bal{
-    border-radius: 50%;
-    background-color: aqua;
-    height: 40px;
-    width: 40px;
+     /* border-radius: 50%;
+    background-color: aqua; */
+    height: 45px;
+    width: 45px; 
+    font-size: 30px;
     position: relative;
     top: 350px;
     left: 800px;
-    animation: bal 5s infinite ;
+    animation: bal 4s infinite linear;
+    animation-play-state : running;
 }
 @keyframes bal{
     0% {transform: translate(0,0);}
-    100% {transform: translate(-950px, -190px);    }
+    100% {transform: translate(-800px, -200px);    }
+}
+h3{
+    padding:5px;
+    padding-top: 50px;
+    color: rgb(230, 60, 60);
 }
