@@ -50,9 +50,10 @@ a = true
  
     } else if (posBal.x <= 390 && posBal.x >=360 && y == false) {
    // console.log("hello") 
-   highScore = count
+   
       a=false
       score.innerHTML = `Your score : ${highScore}`
+      highScore = 0
  // score.innerHTML = count
       clearInterval(balM)
       //als alert dan werkt de rest niet?!
@@ -60,6 +61,18 @@ a = true
 bal.style.animationPlayState ="paused"
 bal.style.backgroundColor = "red"
    //count =0
+     
+   let modal = document.querySelector(".modal")
+modal.style.display = "block"
+let yes = document.querySelector("#yes")
+yes.addEventListener("click", ()=>{
+  location.reload()
+}) 
+let no = document.querySelector("#no")
+no.addEventListener("click", ()=>{
+  modal.style.display = "none"
+})  
+     
     } 
     if(count <= 10){
       highScore = count
@@ -67,7 +80,7 @@ bal.style.backgroundColor = "red"
  count = 0
   score.innerHTML = `Your score : ${highScore}`
     }else{
-     
+ 
   score.innerHTML = `Your score : ${highScore}`
     }
 
