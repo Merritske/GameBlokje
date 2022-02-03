@@ -53,7 +53,7 @@ a = true
    
       a=false
       score.innerHTML = `Your score : ${highScore}`
-      highScore = 0
+    
  // score.innerHTML = count
       clearInterval(balM)
       //als alert dan werkt de rest niet?!
