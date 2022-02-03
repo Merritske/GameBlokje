@@ -42,13 +42,13 @@ let balM = setInterval(function () {
  i = count
    // score.innerHTML = count
   }
-    if (posBal.x <= 370  && posBal.x >=340 && y == true) {
+    if (posBal.x <= 390  && posBal.x >=360 && y == true) {
 a = true
  
 //  i = count 
     console.log(i)
  
-    } else if (posBal.x <= 370 && posBal.x >=340 && y == false) {
+    } else if (posBal.x <= 390 && posBal.x >=360 && y == false) {
    // console.log("hello") 
    highScore = count
       a=false
