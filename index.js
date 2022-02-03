@@ -19,22 +19,18 @@ l.addEventListener("click", () => {
     l.style.transform = "rotatey(300deg)"
     r.style.transform = "rotateY(180deg)"
 
-
-
     setTimeout(()=>{
            r.style.transform = "skew(0deg,-20deg)"
         l.style.transform = "skew(0deg,-20deg)"
         y = false  
 if(a == true){
   count++
+ highScore ++
   a= false
 }else if(a== false){
   a = false
-
-}
-     
-    },400)
-      
+}    
+    },400)   
 })
  
 
@@ -45,19 +41,13 @@ let balM = setInterval(function () {
   if(posBal.x >= 870 && posBal.x <= 880 ){
  i = count
    // score.innerHTML = count
-
-
   }
-
     if (posBal.x <= 370  && posBal.x >=340 && y == true) {
-
 a = true
  
 //  i = count 
     console.log(i)
  
-  
-    
     } else if (posBal.x <= 370 && posBal.x >=340 && y == false) {
    // console.log("hello") 
    highScore = count
@@ -70,18 +60,15 @@ a = true
 bal.style.animationPlayState ="paused"
 bal.style.backgroundColor = "red"
    //count =0
-
-    }
-
-  ///fix this !  
+    } 
     if(count <= 10){
       highScore = count
-    }else if(count > 11){
-   
+    }else if(count >= 11 && highScore <12){
  count = 0
-      i = 0
-      highScore = count +10
+  score.innerHTML = `Your score : ${highScore}`
+    }else{
      
+  score.innerHTML = `Your score : ${highScore}`
     }
 
   score.innerHTML = `Your score : ${highScore}`
