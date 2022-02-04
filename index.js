@@ -4,7 +4,7 @@ let bal = document.querySelector(".bal")
 let score = document.querySelector(".score")
 let y = false
 let a = false
-let count = 5
+let count = 0
 let highScore =0
 
  let i= 0
