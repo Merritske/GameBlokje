@@ -74,7 +74,7 @@ no.addEventListener("click", ()=>{
 })  
      
     } 
-    if(count <= 10){
+    if(highScore <= 10){
       highScore = count
     }else if(count >= 11 && highScore <12){
  count = 0
