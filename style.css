@@ -117,11 +117,11 @@ left: 200px;
     position: relative;
     top: 350px;
     left: 800px;
-    animation: bal 2s infinite linear;
+    animation: balletje 2s infinite linear;
     animation-play-state : running;
     z-index: 2;
 }
-@keyframes bal{
+@keyframes balletje{
     0% {transform: translate(0,0);}
     100% {transform: translate(-800px, -200px);    }
 }

@@ -9,8 +9,8 @@ let highScore =0
 
  let i= 0
 let animals = [`<i style="transform:rotateY(180deg)" class="fas fa-otter fa-2x"></i>`, `<i style="transform:rotateY(180deg)" class="fas fa-cat fa-2x"></i>`,`<i style="transform:rotateY(180deg)" class="fas fa-dog fa-2x"></i>`,
- `<i style="transform:rotateY(180deg)" class="fas fa-hippo fa-3x"></i>`, `<i style="transform:rotateY(180deg)" class="fas fa-kiwi-bird"></i>`, `<i  style="transform:rotateY(180deg)" class="fas fa-spider"></i>`, `<i style="transform:rotateY(180deg)" class="fas fa-horse fa-3x"></i>`,
-`<i style="transform:rotateY(180deg)" class="fas fa-crow"></i>`, `<i style="transform:rotateY(180deg)" class="fas fa-dragon fa-3x"></i>`, `<i  style="transform:rotateY(180deg)" class="fas fa-dove"></i>`, `<i  style="transform:rotateY(180deg)"  class="fas fa-frog"></i>` ]
+ `<i style="transform:rotateY(180deg)" class="fas fa-hippo fa-3x"></i>`, `<i style="transform:rotateY(180deg)" class="fas fa-dragon fa-3x"></i>`, `<i style="transform:rotateY(180deg)" class="fas fa-kiwi-bird"></i>`, `<i  style="transform:rotateY(180deg)" class="fas fa-spider"></i>`, `<i style="transform:rotateY(180deg)" class="fas fa-horse fa-3x"></i>`,
+`<i style="transform:rotateY(180deg)" class="fas fa-crow"></i>`, `<i  style="transform:rotateY(180deg)" class="fas fa-dove"></i>`, `<i  style="transform:rotateY(180deg)"  class="fas fa-frog"></i>` ]
 
 
 
@@ -35,32 +35,36 @@ if(a == true){
  
 
 let balM = setInterval(function () {
+ // bal.innerHTML = animals[i]
   
-    let posBal = bal.getBoundingClientRect();
-    console.log(highScore)
-    if(highScore > 20){
-      bal.style.animation = "bal 0.5s infinite linear"
-     }else if(highScore > 16){
-      bal.style.animation = "bal 1s infinite linear"
-     }else if(highScore > 12){
-      bal.style.animation = "bal 1.3s infinite linear"
-     }else if(highScore > 9){
-      bal.style.animation = "bal 1.5s infinite linear"
-     } else if(highScore > 6){
-      bal.style.animation = "bal 1.8s infinite linear"
-     }
      
-  if(posBal.x >= 870 && posBal.x <= 880 ){
- i = count
-//bal.innerHTML = animals[i]
 
+
+
+    let posBal = bal.getBoundingClientRect();
+ //   console.log(highScore)
+
+  if(posBal.x >= 870 && posBal.x <= 880 ){
+
+  if(highScore >= 18){
+      bal.style.animation = "balletje 1s infinite linear"
+     }else if(highScore >= 12){
+      bal.style.animation = "balletje 1.1s infinite linear"
+     }else if(highScore >= 9 && highScore < 12){
+      bal.style.animation = "balletje 1.5s infinite linear"
+     }else if(highScore >= 6 && highScore <9){
+      bal.style.animation = "balletje 1.5s infinite linear"
+     } else if(highScore >= 3 && highScore < 6){
+      bal.style.animation = "balletje 1.8s infinite linear"
+     }
+ i = count
   }
 
     if (posBal.x <= 390  && posBal.x >=360 && y == true) {
 a = true
  
 
-    console.log(i)
+ //   console.log(i)
  
     } else if (posBal.x <= 390 && posBal.x >=360 && y == false) {
 bal.style.animationPlayState ="paused"
@@ -107,7 +111,7 @@ no.addEventListener("click", ()=>{
  bal.innerHTML = animals[i]
 
 
-},8)
+},2)
 
 
 
