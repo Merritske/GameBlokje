@@ -117,7 +117,7 @@ left: 200px;
     position: relative;
     top: 350px;
     left: 800px;
-    animation: bal 3s infinite linear;
+    animation: bal 2s infinite linear;
     animation-play-state : running;
     z-index: 2;
 }

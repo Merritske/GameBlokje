@@ -4,7 +4,7 @@ let bal = document.querySelector(".bal")
 let score = document.querySelector(".score")
 let y = false
 let a = false
-let count = 0 
+let count = 5
 let highScore =0
 
  let i= 0
@@ -30,37 +30,48 @@ if(a == true){
 }else if(a== false){
   a = false
 }    
-    },400)   
+    },300)   
 })
  
 
 let balM = setInterval(function () {
-
+  
     let posBal = bal.getBoundingClientRect();
-
+    console.log(highScore)
+    if(highScore > 20){
+      bal.style.animation = "bal 0.5s infinite linear"
+     }else if(highScore > 16){
+      bal.style.animation = "bal 1s infinite linear"
+     }else if(highScore > 12){
+      bal.style.animation = "bal 1.3s infinite linear"
+     }else if(highScore > 9){
+      bal.style.animation = "bal 1.5s infinite linear"
+     } else if(highScore > 6){
+      bal.style.animation = "bal 1.8s infinite linear"
+     }
+     
   if(posBal.x >= 870 && posBal.x <= 880 ){
  i = count
-   // score.innerHTML = count
+//bal.innerHTML = animals[i]
+
   }
+
     if (posBal.x <= 390  && posBal.x >=360 && y == true) {
 a = true
  
-//  i = count 
+
     console.log(i)
  
     } else if (posBal.x <= 390 && posBal.x >=360 && y == false) {
-   // console.log("hello") 
-   
-      a=false
-      score.innerHTML = `Your score : ${highScore}`
-    
- // score.innerHTML = count
-      clearInterval(balM)
-      //als alert dan werkt de rest niet?!
-//alert("game over")
 bal.style.animationPlayState ="paused"
 bal.style.backgroundColor = "red"
-   //count =0
+         a=false
+      score.innerHTML = `Your score : ${highScore}`
+
+      clearInterval(balM)
+
+
+
      
    let modal = document.querySelector(".modal")
 modal.style.display = "block"
@@ -72,20 +83,28 @@ let no = document.querySelector("#no")
 no.addEventListener("click", ()=>{
   modal.style.display = "none"
 })  
+
      
     } 
+
+
+
     if(highScore <= 10){
       highScore = count
-    }else if(count >= 11 && highScore <12){
+    }else if(count >= 11 && highScore <12 ){
  count = 0
-  score.innerHTML = `Your score : ${highScore}`
-    }else{
- 
-  score.innerHTML = `Your score : ${highScore}`
+//i = count
+//  score.innerHTML = `Your score : ${highScore}`
+  
+    }
+    else if(count >= 11 && highScore <24){
+      count = 0
+ // score.innerHTML = `Your score : ${highScore}`
     }
 
+
   score.innerHTML = `Your score : ${highScore}`
-  bal.innerHTML = animals[i]
+ bal.innerHTML = animals[i]
 
 
 },8)
