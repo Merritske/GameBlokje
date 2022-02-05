@@ -15,7 +15,7 @@ let animals = [ `<i style="transform:rotateY(180deg)" class="fas fa-hippo fa-3x"
 
 
 
-l.addEventListener("click", () => {
+window.addEventListener("click", () => {
     y = true
     l.style.transform = "rotatey(300deg)"
     r.style.transform = "rotateY(180deg)"
