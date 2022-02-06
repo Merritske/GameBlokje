@@ -94,7 +94,7 @@ left: 200px;
     transform: skew(0deg, -20deg);
     position: relative;
     top: 89px;
-    background-color: pink;
+    background-color: grey;
     border: 5px double rgb(60, 60, 60);
     z-index: 4;
 }
